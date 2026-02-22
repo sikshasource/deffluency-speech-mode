@@ -25,7 +25,7 @@ import io
 
 import numpy as np
 import pandas as pd
-import torch
+#import torch
 
 # Performance optimizations
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
@@ -57,7 +57,7 @@ class SystemConfig:
     HOP_LENGTH = 256
     
     # Model settings
-    DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    #DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     BATCH_SIZE = 32
     EPOCHS = 50
     LEARNING_RATE = 0.001
@@ -213,235 +213,7 @@ def audio_recorder_component():
 # Custom CSS - Modern Professional Design
 # -------------------------
 def apply_custom_css():
-    st.markdown(#"""
-    # #<style>
-    #     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        
-    #     * {
-    #         font-family: 'Inter', sans-serif;
-    #     }
-        
-    #     .main {
-    #         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    #         padding: 0;
-    #     }
-        
-    #     .header-card {
-    #         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    #         padding: 3rem 2rem;
-    #         border-radius: 20px;
-    #         margin-bottom: 2rem;
-    #         box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    #         text-align: center;
-    #         color: black;
-    #         position: relative;
-    #         overflow: hidden;
-    #     }
-        
-    #     .header-card::before {
-    #         content: '';
-    #         position: absolute;
-    #         top: -50%;
-    #         right: -50%;
-    #         width: 200%;
-    #         height: 200%;
-    #         background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
-    #         animation: pulse 15s ease-in-out infinite;
-    #     }
-        
-    #     @keyframes pulse {
-    #         0%, 100% { transform: scale(1); }
-    #         50% { transform: scale(1.1); }
-    #     }
-        
-    #     .header-title {
-    #         font-size: 3rem;
-    #         font-weight: 700;
-    #         margin: 0;
-    #         text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    #         position: relative;
-    #         z-index: 1;
-    #     }
-        
-    #     .header-subtitle {
-    #         font-size: 1.2rem;
-    #         opacity: 0.95;
-    #         margin-top: 0.5rem;
-    #         position: relative;
-    #         z-index: 1;
-    #     }
-        
-    #     .metric-card {
-    #         background: white;
-    #         padding: 2rem;
-    #         border-radius: 15px;
-    #         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    #         border-left: 5px solid #667eea;
-    #         margin-bottom: 1.5rem;
-    #         transition: all 0.3s ease;
-    #     }
-        
-    #     .metric-card:hover {
-    #         transform: translateY(-5px);
-    #         box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    #     }
-        
-    #     .metric-value {
-    #         font-size: 2.5rem;
-    #         font-weight: 700;
-    #         color: #667eea;
-    #         margin: 0;
-    #     }
-        
-    #     .metric-label {
-    #         font-size: 0.9rem;
-    #         color: #666;
-    #         text-transform: uppercase;
-    #         letter-spacing: 1px;
-    #         margin-top: 0.5rem;
-    #     }
-        
-    #     .analysis-card {
-    #         background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    #         padding: 2rem;
-    #         border-radius: 15px;
-    #         margin: 1rem 0;
-    #         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    #     }
-        
-    #     .prediction-card {
-    #         background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
-    #         padding: 2rem;
-    #         border-radius: 15px;
-    #         color: white;
-    #         text-align: center;
-    #         margin: 1rem 0;
-    #         box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    #     }
-        
-    #     .prediction-class {
-    #         font-size: 2.5rem;
-    #         font-weight: 700;
-    #         margin: 0;
-    #         text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-    #     }
-        
-    #     .prediction-confidence {
-    #         font-size: 1.5rem;
-    #         opacity: 0.95;
-    #         margin-top: 0.5rem;
-    #     }
-        
-    #     .alert-success {
-    #         background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
-    #         color: white;
-    #         padding: 1rem;
-    #         border-radius: 10px;
-    #         margin: 1rem 0;
-    #     }
-        
-    #     .alert-warning {
-    #         background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-    #         color: #8b4513;
-    #         padding: 1rem;
-    #         border-radius: 10px;
-    #         margin: 1rem 0;
-    #     }
-        
-    #     .alert-error {
-    #         background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
-    #         color: white;
-    #         padding: 1rem;
-    #         border-radius: 10px;
-    #         margin: 1rem 0;
-    #     }
-        
-    #     .stProgress > div > div > div > div {
-    #         background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
-    #     }
-        
-    #     .stButton>button {
-    #         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    #         color: white;
-    #         border: none;
-    #         padding: 0.75rem 2rem;
-    #         border-radius: 10px;
-    #         font-weight: 600;
-    #         transition: all 0.3s ease;
-    #         box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    #     }
-        
-    #     .stButton>button:hover {
-    #         transform: translateY(-2px);
-    #         box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
-    #     }
-        
-    #     .stTabs [data-baseweb="tab-list"] {
-    #         gap: 2rem;
-    #         background: white;
-    #         padding: 1rem;
-    #         border-radius: 15px;
-    #         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    #     }
-        
-    #     .stTabs [data-baseweb="tab"] {
-    #         padding: 1rem 2rem;
-    #         border-radius: 10px;
-    #         font-weight: 600;
-    #     }
-        
-    #     .stTabs [aria-selected="true"] {
-    #         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    #         color: white;
-    #     }
-        
-    #     .recording-card {
-    #         background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
-    #         padding: 2rem;
-    #         border-radius: 15px;
-    #         text-align: center;
-    #         margin: 1rem 0;
-    #         box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    #     }
-        
-    #     .shap-container {
-    #         background: white;
-    #         padding: 2rem;
-    #         border-radius: 15px;
-    #         box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    #         margin: 1rem 0;
-    #     }
-        
-    #     .format-badge {
-    #         display: inline-block;
-    #         background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    #         color: white;
-    #         padding: 0.5rem 1rem;
-    #         border-radius: 20px;
-    #         font-size: 0.9rem;
-    #         font-weight: 600;
-    #         margin: 0.5rem;
-    #     }
-        
-    #     .info-box {
-    #         background: white;
-    #         padding: 1.5rem;
-    #         border-radius: 10px;
-    #         border-left: 4px solid #667eea;
-    #         margin: 1rem 0;
-    #         box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    #     }
-        
-    #     .training-status {
-    #         background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
-    #         padding: 1.5rem;
-    #         border-radius: 10px;
-    #         margin: 1rem 0;
-    #     }
-    # </style>
-    # """,
-    """ 
-
+    st.markdown(""" 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
@@ -1225,12 +997,12 @@ def train_classical_models(X_train, X_test, y_train, y_test, le, progress_callba
 # -------------------------
 # Page Configuration
 # -------------------------
-st.set_page_config(
-    page_title="Dysfluency Detection Pro",
-    page_icon="🎙️",
-    layout="wide",
-    initial_sidebar_state="expanded"
-)
+# st.set_page_config(
+#     page_title="Dysfluency Detection Pro",
+#     page_icon="🎙️",
+#     layout="wide",
+#     initial_sidebar_state="expanded"
+# )
 
 apply_custom_css()
 
@@ -1250,14 +1022,14 @@ def main():
     with st.sidebar:
         st.markdown("### ⚙️ System Configuration")
         
-        st.markdown(f"""
-        <div class="info-box">
-            <strong>🖥️ Device:</strong> {config.DEVICE}<br>
-            <strong>📊 Sample Rate:</strong> {config.TARGET_SR} Hz<br>
-            <strong>🎵 Max Duration:</strong> {config.MAX_DURATION}s<br>
-            <strong>🧠 MFCC Features:</strong> {config.MFCC_N}
-        </div>
-        """, unsafe_allow_html=True)
+        # st.markdown(f"""
+        # <div class="info-box">
+        #     <strong>🖥️ Device:</strong> {config.DEVICE}<br>
+        #     <strong>📊 Sample Rate:</strong> {config.TARGET_SR} Hz<br>
+        #     <strong>🎵 Max Duration:</strong> {config.MAX_DURATION}s<br>
+        #     <strong>🧠 MFCC Features:</strong> {config.MFCC_N}
+        # </div>
+        # """, unsafe_allow_html=True)
         
         st.markdown("---")
         st.markdown("### 📊 Quick Stats")
