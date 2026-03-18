@@ -1,0 +1,5 @@
+Model,Accuracy (%),Precision (%),Recall (%),F1-Score (%),CV Mean,CV Std
+RandomForest,71.82,70.40,71.82,69.43,85.33,5.61
+XGBoost,71.82,69.68,71.82,70.04,86.85,4.22
+GradientBoosting,71.27,70.06,71.27,68.25,85.81,4.81
+LightGBM,73.48,72.09,73.48,72.25,N/A,N/A
