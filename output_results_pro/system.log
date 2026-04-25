@@ -6,3 +6,11 @@
 2026-03-17 22:23:36,849 - INFO - LightGBM - Accuracy: 0.7348, F1: 0.7225
 2026-03-18 12:58:55,082 - WARNING - From C:\Users\Win\AppData\Roaming\Python\Python313\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
 
+2026-03-20 20:04:15,561 - WARNING - From C:\Users\Win\AppData\Roaming\Python\Python313\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2026-03-27 21:26:06,175 - WARNING - From C:\Users\Win\AppData\Roaming\Python\Python313\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2026-03-27 21:31:25,763 - WARNING - From C:\Users\Win\AppData\Roaming\Python\Python313\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+2026-04-22 21:59:43,975 - WARNING - From C:\Users\Win\AppData\Roaming\Python\Python313\site-packages\keras\src\backend\common\global_state.py:82: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
