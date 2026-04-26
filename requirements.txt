@@ -64,3 +64,4 @@ scipy
 transformers
 torch
 tensorflow
+torchvision
