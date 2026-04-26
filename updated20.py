@@ -23,6 +23,7 @@ import tempfile
 from datetime import datetime
 import base64
 import io
+from sklearn.utils import parse_version
 
 import numpy as np
 import pandas as pd
