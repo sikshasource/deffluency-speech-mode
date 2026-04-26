@@ -46,7 +46,7 @@
 
 librosa==0.10.0
 soundfile==0.12.1
-streamlit>=1.56.0
+streamlit
 
 imbalanced-learn
 xgboost==2.0.3
