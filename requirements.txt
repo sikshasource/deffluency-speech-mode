@@ -42,7 +42,7 @@
 # matplotlib==3.8.2
 
 # imbalanced-learn
-
+pip install --upgrade pip
 
 librosa==0.10.0
 soundfile==0.12.1
