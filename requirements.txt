@@ -63,3 +63,4 @@ seaborn
 scipy
 transformers
 torch
+tensorflow
